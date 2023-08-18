@@ -65,7 +65,7 @@ public class CompanyInfoServiceImpl implements CompanyInfoService{
         return toDto(existingCompany);
     }*/
     @Override
-    public CompanyInfoDto updateCompanyName(Long id, String newCompanyName) {
+    public CompanyInfoDto updateCompanyName(Long id, String newCompanyName) { //id ve companyId güncellenmemeli
         CompanyInfoEntity existingCompany = companyInfoRepository.findById(id)
                 .orElseThrow(() -> new NoSuchElementException("Şirket bulunamadı"));
 
